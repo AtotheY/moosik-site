@@ -1,0 +1,40 @@
+[
+  {
+    "tag_name": "moosik-v0.1.26",
+    "draft": false,
+    "prerelease": false,
+    "assets": [
+      {
+        "name": "appcast.xml",
+        "browser_download_url": "https://github.com/AtotheY/moosik/releases/download/moosik-v0.1.26/appcast.xml",
+        "size": 1668
+      },
+      {
+        "name": "moosik-0.1.26-macos-arm64.dmg",
+        "browser_download_url": "https://github.com/AtotheY/moosik/releases/download/moosik-v0.1.26/moosik-0.1.26-macos-arm64.dmg",
+        "size": 85506688
+      },
+      {
+        "name": "moosik-0.1.26-macos-arm64.zip",
+        "browser_download_url": "https://github.com/AtotheY/moosik/releases/download/moosik-v0.1.26/moosik-0.1.26-macos-arm64.zip",
+        "size": 80537222
+      },
+      {
+        "name": "moosik-0.1.26-SHA256SUMS.txt",
+        "browser_download_url": "https://github.com/AtotheY/moosik/releases/download/moosik-v0.1.26/moosik-0.1.26-SHA256SUMS.txt",
+        "size": 474
+      },
+      {
+        "name": "moosik-0.1.26-windows-x86_64-setup.exe",
+        "browser_download_url": "https://github.com/AtotheY/moosik/releases/download/moosik-v0.1.26/moosik-0.1.26-windows-x86_64-setup.exe",
+        "size": 82565933
+      },
+      {
+        "name": "moosik-0.1.26-windows-x86_64.zip",
+        "browser_download_url": "https://github.com/AtotheY/moosik/releases/download/moosik-v0.1.26/moosik-0.1.26-windows-x86_64.zip",
+        "size": 97205791
+      }
+    ],
+    "minimum_macos": "26.0"
+  }
+]

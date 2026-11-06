@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050609" />
+    <title>Moosik – YouTube Music Desktop App for Mac and Windows</title>
+    <meta name="description" content="Play your YouTube Music library on Mac or Windows with Moosik, a free, open-source desktop player. Share songs on Discord and listen along with friends." />
+    <link rel="alternate" type="application/atom+xml" title="Moosik Blog" href="/blog/feed.xml" />
+    <link rel="canonical" href="https://moosik.dev/" />
+    <link rel="icon" type="image/png" href="/assets/moosik.png" />
+    <meta property="og:site_name" content="Moosik" />
+    <meta property="og:title" content="Moosik – YouTube Music Desktop App for Mac and Windows" />
+    <meta property="og:description" content="Play YouTube Music on your desktop. Share your song on Discord and invite friends to listen along." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://moosik.dev/" />
+    <meta property="og:image" content="https://moosik.dev/assets/player.jpg" />
+    <meta property="og:image:alt" content="An album open in the Moosik desktop player" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "@id": "https://moosik.dev/#app",
+        "sameAs": "https://github.com/AtotheY/moosik",
+        "isBasedOn": "https://github.com/gridoe/refryt",
+        "license": "https://spdx.org/licenses/GPL-3.0-or-later.html",
+        "name": "Moosik",
+        "url": "https://moosik.dev/",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": ["macOS (Apple Silicon)", "Windows (x64)"],
+        "description": "An open-source YouTube Music desktop player with Discord Rich Presence, Listen along, synced lyrics, and listening stats.",
+        "downloadUrl": "https://moosik.dev/download/",
+        "image": "https://moosik.dev/assets/moosik.png",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+      }
+    </script>
+    <noscript><style>
+      .space-controls, .platform-tabs, .showcase-controls, .showcase-track .native-stage, .showcase-pin .preview-options { display: none; }
+      .product-section .showcase-track { height: auto; min-height: 0; }
+      .product-section .showcase-pin { position: static; min-height: 0; }
+      .product-heading [hidden] { display: block; margin-top: 1rem; }
+    </style></noscript>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

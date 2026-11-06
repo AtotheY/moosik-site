@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090a0e">
+<title>About Moosik | An independent YouTube Music desktop client</title>
+<meta name="description" content="Who builds Moosik, how it uses your existing YouTube Music account, what it records on your computer, and when playback activity is shared.">
+<link rel="canonical" href="https://moosik.dev/about/"><link rel="icon" href="/assets/moosik.png">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Moosik"><meta property="og:title" content="About Moosik"><meta property="og:url" content="https://moosik.dev/about/"><meta property="og:image" content="https://moosik.dev/assets/player.jpg">
+<link rel="stylesheet" href="/src/guides.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","@id":"https://moosik.dev/about/#page","url":"https://moosik.dev/about/","name":"About Moosik","mainEntity":{"@id":"https://moosik.dev/#app"}}</script>
+</head><body class="editorial"><a class="skip-link" href="#content">Skip to content</a>
+<header class="site-header"><a class="wordmark" href="/" aria-label="Moosik home"><img src="/assets/icons/ceramic.png" width="38" height="38" alt="">moosik</a><nav aria-label="Main navigation"><a href="/blog/">Blog</a><a href="/download/">Download ↗</a></nav></header>
+<main id="content" class="article text-article">
+<header class="article-heading reading"><img src="/assets/icons/ceramic.png" width="56" height="56" alt=""><h1>About Moosik</h1><p class="dek">Moosik is a free, open-source desktop player for people who want to keep their YouTube Music library and change how they listen on their computer.</p></header>
+<div class="prose reading">
+<h2 id="project">The project</h2><p>Moosik is an independent fork of <a href="https://github.com/gridoe/refryt">Refryt</a>, created by gridoe and contributors. Refryt supplies the core player and native interface. Moosik builds on that work with searchable listening history, editable queues, private playlists, and listening reports. <a href="https://github.com/AtotheY">AtotheY</a> maintains the fork; its code is available under GPL-3.0-or-later in the <a href="https://github.com/AtotheY/moosik">official repository</a>.</p>
+<p>You can install a <a href="/download/#mac">Mac disk image</a> or the <a href="/download/#windows">experimental Windows x64 installer</a>. Source builds are optional. The download page lists the requirements for each release.</p>
+<h2 id="account">Your music account</h2><p>Moosik connects to YouTube Music and is intended for YouTube Premium or YouTube Music Premium accounts. Google provides the catalog, account playlists, and streaming access. Moosik is independent of Google and YouTube.</p>
+<h2 id="history">Two places a play can be recorded</h2>
+<p><strong>In Moosik:</strong> the local listening database records playback seen by this installation. Search those songs by title or artist, rate a track, or export a report. Plays from your phone or from before you installed the app do not get added to that local record. <a href="/blog/what-counts-as-a-play/">See a worked play-count example</a>.</p>
+<p><strong>On YouTube:</strong> when you’re signed in, <strong>Settings → Playback → Queue and history → Save listening history</strong> controls whether Moosik reports supported plays to YouTube. The setting is on by default and applies when a new track starts. Turning it off leaves the local listening database available. <a href="https://github.com/AtotheY/moosik/blob/moosik-v0.1.26/crates/refryt/src/ui/settings.rs#L527-L543">The setting in version 0.1.26</a>.</p>
+<p>In the Mac release, Moosik keeps the reusable sign-in session in Keychain. The Windows release saves its session in the per-user configuration. The listening database is a separate file. Its exports can include local music file paths, dates and tags, so choose <a href="/blog/export-listening-stats/">the export that matches what you want to share</a>. <a href="https://github.com/AtotheY/moosik/blob/moosik-v0.1.26/crates/refryt/src/auth.rs#L77-L134">How session storage works</a>.</p>
+<h2 id="sharing">Private playlists and listening together</h2><p>Choose <strong>Save privately</strong> to keep a playlist on this computer. Playing a streamed song still contacts YouTube. Edits made to a YouTube account playlist go to that account. <a href="/blog/mix-local-files-youtube-music-playlist/">Compare local files and streamed tracks</a>.</p>
+<p>Opening lyrics can look up the song title, artist and available album or duration with LRCLIB, including for local recordings. <a href="/blog/youtube-music-synced-lyrics-desktop/">How lyrics are matched</a>.</p>
+<p>Discord Rich Presence is off by default. Enabling it shows your activity on Discord. Hosting Listen along also makes the current song and playback position available to anyone with the active invite. <a href="/blog/youtube-music-discord/">How Discord listening works</a>.</p>
+</div></main>
+<footer><a href="/" class="blog-foot-brand">moosik</a><div><a href="/blog/">Blog</a><a href="/download/">Download</a><a href="https://github.com/AtotheY/moosik">GitHub ↗</a></div></footer>
+</body></html>

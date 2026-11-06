@@ -1,0 +1,7 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {detectPlatform,selectDownloads,REPO} from '../src/lib/releases.mjs';
+const release=(tag,assets,other={})=>({tag_name:tag,assets:assets.map(name=>({name,browser_download_url:`${REPO}/releases/download/${tag}/${name}`})),...other});
+test('desktop detection does not misidentify phones',()=>{assert.equal(detectPlatform('Windows NT 10.0'),'windows');assert.equal(detectPlatform('Macintosh'),'mac');assert.equal(detectPlatform('iPhone; CPU iPhone OS like Mac OS X'),'choose');assert.equal(detectPlatform('Linux'),'choose');});
+test('find latest available installer for each platform independently',()=>{const result=selectDownloads([release('moosik-v0.1.19',['moosik-0.1.19-macos-arm64.dmg']),release('moosik-v0.1.18',['moosik-0.1.18-windows-x86_64-setup.exe'])]);assert.equal(result.mac.version,'0.1.19');assert.equal(result.windows.version,'0.1.18');});
+test('never offers wrong OS, draft, prerelease, or untrusted asset',()=>{assert.deepEqual(selectDownloads([release('moosik-v0.1.20',['moosik-0.1.20-windows-x86_64-setup.exe'],{prerelease:true})]),{mac:null,windows:null});const r=release('moosik-v0.1.18',['moosik-0.1.18-macos-arm64.dmg']);r.assets[0].browser_download_url='https://example.com/malware';assert.equal(selectDownloads([r]).mac,null);assert.equal(selectDownloads([release('moosik-v0.1.18',['moosik-0.1.18-macos-arm64.zip'])]).windows,null);});
